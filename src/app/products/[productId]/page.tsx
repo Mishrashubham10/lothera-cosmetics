@@ -115,7 +115,7 @@ export default function SingleProduct() {
                   </Badge>
                 )}
                 {product.isBestSeller && (
-                  <Badge className="gradient-luxury text-luxury-foreground">
+                  <Badge>
                     Best Seller
                   </Badge>
                 )}
@@ -174,7 +174,7 @@ export default function SingleProduct() {
 
                 <div className="flex space-x-4">
                   <Button
-                    className="flex-1 gradient-primary text-primary-foreground shadow-luxury"
+                    className="flex-1 bg-gradient-to-r from-[#e94057]/95 to-[#f27121]/95 text-primary-foreground shadow-luxury"
                     onClick={handleAddToCart}
                   >
                     <ShoppingBag className="w-4 h-4 mr-2" />

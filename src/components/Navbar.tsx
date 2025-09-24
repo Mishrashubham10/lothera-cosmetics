@@ -10,10 +10,11 @@ import Link from 'next/link';
 import { notFound, usePathname } from 'next/navigation';
 import { useBeauty } from '@/context/BeautyContext';
 import Image from 'next/image';
+import { toast } from 'sonner';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { state } = useBeauty();
+  const { state, dispatch } = useBeauty();
   const pathname = usePathname();
   const [query, setQuery] = useState('');
 
@@ -33,6 +34,11 @@ const Navbar = () => {
     (total, item) => total + item.quantity,
     0
   );
+
+  const handleLogout = () => {
+    dispatch({ type: 'LOGOUT' }),
+      toast.success("You've been logged out successfully!");
+  };
 
   // FOR GLOBAL SEARCH
   const filteredProducts = state.products.filter((p) => {
@@ -86,7 +92,7 @@ const Navbar = () => {
                 placeholder="Search products..."
                 className="pl-10 w-64 bg-white/10 text-white placeholder:text-white/70 border-white/30 focus:border-yellow-300"
                 value={query}
-                onChange={(e)=>setQuery(e.target.value)}
+                onChange={(e) => setQuery(e.target.value)}
               />
             </div>
 
@@ -125,8 +131,9 @@ const Navbar = () => {
                   variant="ghost"
                   size="icon"
                   className="text-white hover:bg-white/10"
+                  onClick={handleLogout}
                 >
-                  <User className="w-5 h-5" />
+                  <User className='size-4' />
                 </Button>
               ) : (
                 <Link href="/login">

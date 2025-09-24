@@ -41,7 +41,7 @@ export const ProductCard = ({
   return (
     <Card
       className={cn(
-        'group overflow-hidden cursor-pointer transition-smooth hover:shadow-xl',
+        'overflow-hidden cursor-pointer m-0 p-0 transition-smooth hover:shadow-xl',
         className
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -69,7 +69,7 @@ export const ProductCard = ({
             </Badge>
           )}
           {product.isBestSeller && (
-            <Badge className="gradient-luxury text-luxury-foreground shadow-md">
+            <Badge className="shadow-md">
               Best Seller
             </Badge>
           )}
@@ -119,7 +119,7 @@ export const ProductCard = ({
           )}
         >
           <Button
-            className="w-full gradient-primary text-primary-foreground shadow-luxury"
+            className="w-full bg-gradient-to-r from-[#e94057]/95 to-[#f27121]/95 text-primary-foreground shadow-md"
             onClick={(e) => {
               e.stopPropagation();
               onAddToCart?.(product);

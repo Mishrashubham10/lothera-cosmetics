@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContextWrapper from '@/components/ContextWrapper';
+import { Toaster } from 'sonner';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,6 +34,7 @@ export default function RootLayout({
         <ContextWrapper>
           <Navbar />
           {children}
+          <Toaster richColors position="bottom-right" />
           <Footer />
         </ContextWrapper>
       </body>

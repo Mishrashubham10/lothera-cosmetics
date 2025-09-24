@@ -16,9 +16,11 @@ import { useRouter } from 'next/navigation';
 interface CheckoutButtonProps {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
+  title: string;
+  description?: string;
 }
 
-export function PopupCheckout({ open, setOpen }: CheckoutButtonProps) {
+export function PopupCheckout({ open, setOpen, title, description }: CheckoutButtonProps) {
   const router = useRouter();
 
   function handleContinueShoping() {
@@ -32,11 +34,10 @@ export function PopupCheckout({ open, setOpen }: CheckoutButtonProps) {
           <DialogHeader className="text-center">
             <CheckCircle2 className="w-12 h-12 text-green-600 mx-auto mb-3" />
             <DialogTitle className="text-2xl font-bold text-foreground">
-              Order Successful 🎉
+              {title}
             </DialogTitle>
             <DialogDescription className="text-muted-foreground mt-2">
-              Thank you for shopping with us. Your order has been placed and
-              will be delivered soon!
+              {description}
             </DialogDescription>
           </DialogHeader>
 

@@ -100,11 +100,11 @@ export default function CartPage() {
                       </p>
                       <div className="flex items-center space-x-2 mt-1">
                         <span className="font-bold text-foreground">
-                          ${item.price.toFixed(2)}
+                          ₹{item.price.toFixed(2)}
                         </span>
                         {item.originalPrice && (
                           <span className="text-sm text-muted-foreground line-through">
-                            ${item.originalPrice.toFixed(2)}
+                            ₹{item.originalPrice.toFixed(2)}
                           </span>
                         )}
                       </div>
@@ -162,7 +162,7 @@ export default function CartPage() {
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal</span>
                     <span className="text-foreground">
-                      ${subtotal.toFixed(2)}
+                      ₹{subtotal.toFixed(2)}
                     </span>
                   </div>
                   <div className="flex justify-between text-sm">
@@ -173,33 +173,39 @@ export default function CartPage() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Tax</span>
-                    <span className="text-foreground">${tax.toFixed(2)}</span>
+                    <span className="text-foreground">₹{tax.toFixed(2)}</span>
                   </div>
 
                   <Separator />
 
                   <div className="flex justify-between font-semibold">
                     <span className="text-foreground">Total</span>
-                    <span className="text-foreground">${total.toFixed(2)}</span>
+                    <span className="text-foreground">₹{total.toFixed(2)}</span>
                   </div>
                 </div>
 
                 {shipping > 0 && (
                   <div className="mt-4 p-3 bg-muted/50 rounded-lg">
                     <p className="text-xs text-muted-foreground">
-                      Add ${(50 - subtotal).toFixed(2)} more for free shipping
+                      Add ₹{(50 - subtotal).toFixed(2)} more for free shipping
                     </p>
                   </div>
                 )}
 
                 <Button
-                  className="w-full mt-6 gradient-primary text-primary-foreground"
+                  className="w-full mt-6 bg-gradient-to-r from-[#e94057]/95 to-[#f27121]/95 text-primary-foreground"
                   onClick={handleCheckout}
                   disabled={isProcessing}
                 >
                   {isProcessing ? 'Processing...' : 'Proceed to Checkout'}
                 </Button>
-                <PopupCheckout open={open} setOpen={setOpen} />
+                <PopupCheckout
+                  open={open}
+                  setOpen={setOpen}
+                  title="Order Successful 🎉"
+                  description="Thank you for shopping with us. Your order has been placed and
+              will be delivered soon!"
+                />
 
                 <Link href="/products">
                   <Button variant="outline" className="w-full mt-3">

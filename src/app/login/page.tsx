@@ -71,7 +71,7 @@ export default function LoginPage() {
                 Welcome Back
               </CardTitle>
               <CardDescription>
-                Sign in to your BeautyLux account to continue your beauty
+                Sign in to your Lothera account to continue your beauty
                 journey
               </CardDescription>
             </div>
