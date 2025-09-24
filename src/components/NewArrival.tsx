@@ -8,7 +8,7 @@ import { Link, ShoppingCart, Star } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 
-export default function NewArrival() {
+export default function NewArrivalsPage() {
   // ======== NEW ARRIVAL FROM PRODUTS ========
   const newArrivals = products.slice(-6);
   console.log('New arrival products are here!!!', newArrivals);

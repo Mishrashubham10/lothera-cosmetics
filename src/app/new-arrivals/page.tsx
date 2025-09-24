@@ -16,7 +16,6 @@ export default function NewArrivalsPage() {
   const { state } = useBeauty();
   const newArrivals = state.products.filter((p) => p.isNew);
 
-  // Simple client-side sort state (newest first by default based on price as a proxy)
   const [sort, setSort] = useState<'newest' | 'price-desc' | 'price-asc'>(
     'newest'
   );
@@ -43,7 +42,9 @@ export default function NewArrivalsPage() {
             Sort
           </label>
           <Select
-            onValueChange={(v) => setSort(v as any)}
+            onValueChange={(v) =>
+              setSort(v as 'newest' | 'price-desc' | 'price-asc')
+            }
             defaultValue="newest"
           >
             <SelectTrigger className="w-40">
