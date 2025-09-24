@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import { Minus, Plus, X, ShoppingBag } from 'lucide-react';
@@ -8,10 +8,12 @@ import { Separator } from '@/components/ui/separator';
 import { useBeauty } from '@/context/BeautyContext';
 import Link from 'next/link';
 import Image from 'next/image';
+import { PopupCheckout } from '@/components/PopupCheckout';
 
-export default function Cart() {
+export default function CartPage() {
   const { state, dispatch } = useBeauty();
   const [isProcessing, setIsProcessing] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const updateQuantity = (id: string, quantity: number) => {
     if (quantity <= 0) {
@@ -35,11 +37,7 @@ export default function Cart() {
 
   const handleCheckout = () => {
     setIsProcessing(true);
-    // Simulate checkout process
-    setTimeout(() => {
-      setIsProcessing(false);
-      alert('Order placed successfully!');
-    }, 2000);
+    setOpen(true);
   };
 
   if (state.cart.length === 0) {
@@ -201,6 +199,7 @@ export default function Cart() {
                 >
                   {isProcessing ? 'Processing...' : 'Proceed to Checkout'}
                 </Button>
+                <PopupCheckout open={open} setOpen={setOpen} />
 
                 <Link href="/products">
                   <Button variant="outline" className="w-full mt-3">
@@ -214,4 +213,4 @@ export default function Cart() {
       </div>
     </div>
   );
-};
+}
