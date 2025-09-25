@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import { Eye, EyeOff, Mail, Lock, Sparkles } from 'lucide-react';
@@ -71,8 +71,7 @@ export default function LoginPage() {
                 Welcome Back
               </CardTitle>
               <CardDescription>
-                Sign in to your Lothera account to continue your beauty
-                journey
+                Sign in to your Lothera account to continue your beauty journey
               </CardDescription>
             </div>
           </CardHeader>
@@ -149,7 +148,7 @@ export default function LoginPage() {
               {/* Login Button */}
               <Button
                 type="submit"
-                className="w-full gradient-primary text-primary-foreground shadow-luxury hover:shadow-glow transition-bounce"
+                className="w-full bg-gradient-to-r from-[#e94057]/95 to-[#f27121]/95 text-primary-foreground shadow-luxury hover:shadow-glow transition-bounce"
                 disabled={isLoading}
               >
                 {isLoading ? 'Signing in...' : 'Sign In'}
@@ -172,7 +171,10 @@ export default function LoginPage() {
 
             {/* Social Login */}
             <div className="grid grid-cols-2 gap-4">
-              <Button variant="outline" className="w-full">
+              <Button
+                variant="outline"
+                className="w-full hover:bg-gradient-to-r hover:from-[#e94057]/95 hover:to-[#f27121]/95 hover:text-primary-foreground"
+              >
                 <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -194,7 +196,10 @@ export default function LoginPage() {
                 Google
               </Button>
 
-              <Button variant="outline" className="w-full">
+              <Button
+                variant="outline"
+                className="w-full hover:bg-gradient-to-r hover:from-[#e94057]/95 hover:to-[#f27121]/95 hover:text-primary-foreground"
+              >
                 <svg
                   className="w-4 h-4 mr-2"
                   fill="currentColor"
@@ -223,4 +228,4 @@ export default function LoginPage() {
       </div>
     </div>
   );
-};
+}

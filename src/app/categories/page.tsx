@@ -33,8 +33,6 @@ export default function Categories() {
                   <Image
                     src={category.image}
                     alt={category.name}
-                    // height={300}
-                    // width={300}
                     fill
                     className="w-full h-full object-cover transition-smooth group-hover:scale-110"
                   />

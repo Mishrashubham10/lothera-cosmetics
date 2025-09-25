@@ -28,25 +28,25 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-[#e94057] transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-[#e94057] transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-[#e94057] transition-colors"
               >
                 <Twitter className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-[#e94057] transition-colors"
               >
                 <Youtube className="h-5 w-5" />
@@ -68,15 +68,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/category/makeup"
+                  href={`/deals`}
                   className="text-gray-400 hover:text-[#f27121] transition-colors"
                 >
-                  Makeup
+                  Deals
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/category/skincare"
+                  href="/"
                   className="text-gray-400 hover:text-[#f27121] transition-colors"
                 >
                   Skincare
@@ -84,7 +84,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/category/jewelry"
+                  href="/"
                   className="text-gray-400 hover:text-[#f27121] transition-colors"
                 >
                   Jewelry
@@ -107,7 +107,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/shipping"
+                  href="/"
                   className="text-gray-400 hover:text-[#f27121] transition-colors"
                 >
                   Shipping Info
@@ -115,7 +115,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/returns"
+                  href="/"
                   className="text-gray-400 hover:text-[#f27121] transition-colors"
                 >
                   Returns & Exchanges
@@ -123,7 +123,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/size-guide"
+                  href="/"
                   className="text-gray-400 hover:text-[#f27121] transition-colors"
                 >
                   Size Guide
@@ -174,7 +174,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-500">
-            © 2024 LuxeBeauty. All rights reserved.
+            © 2024 Lothera. All rights reserved.
           </p>
         </div>
       </div>

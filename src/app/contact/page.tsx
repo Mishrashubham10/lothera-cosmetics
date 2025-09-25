@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import {
@@ -16,6 +16,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { PopupCheckout } from '@/components/PopupCheckout';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -25,6 +26,7 @@ export default function ContactPage() {
     message: '',
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const contactInfo = [
     {
@@ -36,20 +38,20 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@beautylux.com',
+      details: 'lothera@gmail.com',
       description: 'We respond within 24 hours',
     },
     {
       icon: MapPin,
       title: 'Visit Us',
       details: '123 Beauty Avenue',
-      description: 'New York, NY 10001',
+      description: 'Borivali East, Mumbai 400066',
     },
     {
       icon: Clock,
       title: 'Business Hours',
-      details: 'Mon-Fri: 9AM-6PM',
-      description: 'Weekend: 10AM-4PM',
+      details: 'Mon-Fri: 10:30 AM - 6:30 PM',
+      description: 'Weekend: 10:30 AM-6:30 PM',
     },
   ];
 
@@ -69,7 +71,6 @@ export default function ContactPage() {
 
     // Simulate form submission
     setTimeout(() => {
-      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -78,6 +79,7 @@ export default function ContactPage() {
       });
 
       setIsLoading(false);
+      setOpen(true);
     }, 1000);
   };
 
@@ -93,19 +95,19 @@ export default function ContactPage() {
 
           <h1 className="text-4xl md:text-6xl font-playfair font-bold text-foreground mb-6">
             Contact
-            <span className="text-gradient-primary block">BeautyLux</span>
+            <span className="text-gradient-primary block">Lothera</span>
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Have questions about our products? Need beauty advice? Want to
-            collaborate? We&apos;d love to hear from you. Our beauty experts are here
-            to help.
+            collaborate? We&apos;d love to hear from you. Our beauty experts are
+            here to help.
           </p>
         </div>
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-16 container mx-auto px-4">
+      <section className="py-12 container mx-auto px-4">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Information */}
           <div className="lg:col-span-1">
@@ -114,8 +116,8 @@ export default function ContactPage() {
             </h2>
             <p className="text-muted-foreground mb-8">
               Whether you have questions about our products, need personalized
-              beauty recommendations, or want to share feedback, we&apos;re here to
-              help.
+              beauty recommendations, or want to share feedback, we&apos;re here
+              to help.
             </p>
 
             <div className="space-y-6">
@@ -140,7 +142,7 @@ export default function ContactPage() {
             </div>
 
             {/* Social Links */}
-            <div className="mt-8 pt-8 border-t border-border">
+            {/* <div className="mt-8 pt-8 border-t border-border">
               <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
               <div className="flex space-x-3">
                 {[
@@ -160,23 +162,26 @@ export default function ContactPage() {
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="beauty-card shadow-luxury">
+            <Card className="bg-gradient-to-r from-[#e94057]/95 to-[#f27121]/95 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-2xl font-playfair flex items-center">
-                  <Sparkles className="w-5 h-5 text-primary mr-2" />
+                <CardTitle className="text-2xl font-playfair flex items-center text-primary-foreground">
+                  <Sparkles className="w-5 h-5 text-primary-foreground mr-2" />
                   Send us a Message
                 </CardTitle>
               </CardHeader>
 
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6 text-primary-foreground"
+                >
                   <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
+                    <div className="space-y-2 text-primary-foreground">
                       <Label htmlFor="name">Full Name</Label>
                       <Input
                         id="name"
@@ -185,6 +190,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
+                        className="text-primary-foreground placeholder:text-primary-foreground"
                       />
                     </div>
 
@@ -198,6 +204,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
+                        className="text-primary-foreground placeholder:text-primary-foreground"
                       />
                     </div>
                   </div>
@@ -211,6 +218,7 @@ export default function ContactPage() {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
+                      className="text-primary-foreground placeholder:text-primary-foreground"
                     />
                   </div>
 
@@ -224,12 +232,13 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleInputChange}
                       required
+                      className="text-primary-foreground placeholder:text-primary-foreground"
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full gradient-primary text-primary-foreground shadow-luxury hover:shadow-glow transition-bounce"
+                    className="w-full text-primary-foreground shadow-luxury hover:shadow-md transition-bounce"
                     disabled={isLoading}
                   >
                     {isLoading ? (
@@ -241,6 +250,12 @@ export default function ContactPage() {
                       </>
                     )}
                   </Button>
+                  <PopupCheckout
+                    open={open}
+                    setOpen={setOpen}
+                    title="Thanks for contacting us"
+                    description="We've received your message and will reply as soon as possible. Keep an eye on your inbox!"
+                  />
                 </form>
               </CardContent>
             </Card>
@@ -299,4 +314,4 @@ export default function ContactPage() {
       </section>
     </div>
   );
-};
+}

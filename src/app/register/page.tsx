@@ -248,7 +248,7 @@ export default function RegisterPage() {
             {/* Register Button */}
             <Button
               type="submit"
-              className="w-full gradient-primary text-primary-foreground shadow-glow rounded-xl"
+              className="w-full bg-gradient-to-r from-[#e94057]/95 to-[#f27121]/95 text-primary-foreground shadow-glow rounded-xl"
               disabled={form.formState.isSubmitting}
             >
               {form.formState.isSubmitting
@@ -274,10 +274,16 @@ export default function RegisterPage() {
 
         {/* Social Login */}
         <div className="grid grid-cols-2 gap-4">
-          <Button variant="outline" className="w-full">
+          <Button
+            variant="outline"
+            className="w-full hover:bg-gradient-to-r hover:from-[#e94057]/95 hover:to-[#f27121]/95 hover:text-primary-foreground"
+          >
             Google
           </Button>
-          <Button variant="outline" className="w-full">
+          <Button
+            variant="outline"
+            className="w-full hover:bg-gradient-to-r hover:from-[#e94057]/95 hover:to-[#f27121]/95 hover:text-primary-foreground"
+          >
             Twitter
           </Button>
         </div>
