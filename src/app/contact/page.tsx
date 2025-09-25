@@ -32,8 +32,8 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri, 9am-6pm EST',
+      details: '+91 9823311319',
+      description: 'Mon-Sat, 10:30am-6:30pm EST',
     },
     {
       icon: Mail,
@@ -44,8 +44,8 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: '123 Beauty Avenue',
-      description: 'Borivali East, Mumbai 400066',
+      details: 'Thawar Apartment, flat no 201, Main Carter Road',
+      description: 'Borivali East, Mumbai - 400066, Maharashtra',
     },
     {
       icon: Clock,

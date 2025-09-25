@@ -42,17 +42,17 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* =========== HERO SECTION ============ */}
       <section className="py-16 md:py-24 gradient-hero">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
-            <Sparkles className="w-3 h-3 mr-1" />
+            <Sparkles className="size-3 mr-1" />
             Our Story
           </Badge>
 
           <h1 className="text-4xl md:text-6xl font-playfair font-bold text-foreground mb-6">
             Redefining Beauty
-            <span className="text-gradient-primary block">Since 2009</span>
+            <span className="text-gradient-primary block">Since 2018</span>
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -64,7 +64,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* ============ MISSION SECTION ============= */}
       <section className="py-16 container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -102,7 +102,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* ============ VALUES SECTION ============ */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -138,7 +138,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* ========== TEAM SECTION ============= */}
       <section className="py-16 container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-4">
@@ -153,17 +153,17 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {[
             {
-              name: 'Sarah Chen',
+              name: 'Vinay Chourasiya',
               role: 'Founder & CEO',
-              bio: 'Former Sephora executive with 15+ years in beauty industry',
+              bio: 'Former Sephora executive with 15+ years in cosmetics industry',
             },
             {
-              name: 'Dr. Maria Rodriguez',
+              name: 'Rizwan Shaikh',
               role: 'Chief Formulator',
               bio: 'PhD in Chemistry, specialized in sustainable beauty formulations',
             },
             {
-              name: 'James Thompson',
+              name: 'Manoj Shukla',
               role: 'Creative Director',
               bio: 'Award-winning designer with expertise in luxury brand aesthetics',
             },
