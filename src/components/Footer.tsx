@@ -107,7 +107,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/shipping"
                   className="text-gray-400 hover:text-[#f27121] transition-colors"
                 >
                   Shipping Info
@@ -115,7 +115,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/return"
                   className="text-gray-400 hover:text-[#f27121] transition-colors"
                 >
                   Returns & Exchanges
