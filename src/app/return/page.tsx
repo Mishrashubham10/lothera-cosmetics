@@ -11,7 +11,7 @@ const Returns = () => {
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-            Returns & Refund Policy
+            Returns &amp; Refund Policy
           </h1>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -23,8 +23,8 @@ const Returns = () => {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   At LuxeBeauty, your satisfaction is our priority. We offer a
-                  hassle-free return policy to ensure you're completely happy
-                  with your purchase.
+                  hassle-free return policy to ensure you&apos;re completely
+                  happy with your purchase.
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
@@ -54,7 +54,7 @@ const Returns = () => {
                   <li>Pierced jewelry</li>
                   <li>Personalized or engraved items</li>
                   <li>Gift cards</li>
-                  <li>Items marked as "Final Sale"</li>
+                  <li>Items marked as &quot;Final Sale&quot;</li>
                 </ul>
               </div>
             </section>
@@ -69,7 +69,7 @@ const Returns = () => {
                 <ol className="list-decimal pl-6 space-y-2">
                   <li>Log into your LuxeBeauty account</li>
                   <li>Select the order containing the item(s)</li>
-                  <li>Click “Request Return”</li>
+                  <li>Click &ldquo;Request Return&rdquo;</li>
                   <li>Print the prepaid return label (domestic only)</li>
                   <li>Pack items in original packaging</li>
                   <li>Drop off at an authorized shipping center</li>
@@ -145,8 +145,8 @@ const Returns = () => {
               <div className="space-y-4 text-muted-foreground">
                 <p>You are responsible for return shipping costs.</p>
                 <p>
-                  Please mark packages as “Returned Merchandise” to avoid
-                  customs fees.
+                  Please mark packages as &ldquo;Returned Merchandise&rdquo; to
+                  avoid customs fees.
                 </p>
               </div>
             </section>
