@@ -1,5 +1,7 @@
-// import Navigation from '@/components/Navigation';
+'use client';
+
 import Footer from '@/components/Footer';
+// import Navigation from "@/components/Navigation";
 
 const Returns = () => {
   return (
@@ -13,6 +15,7 @@ const Returns = () => {
           </h1>
 
           <div className="prose prose-lg max-w-none space-y-8">
+            {/* RETURN POLICY */}
             <section className="bg-card rounded-2xl p-8 border border-border">
               <h2 className="text-2xl font-semibold text-foreground mb-4">
                 Our Return Policy
@@ -30,14 +33,13 @@ const Returns = () => {
                   <li>
                     Items must be unused, unopened, and in original packaging
                   </li>
-                  <li>
-                    Proof of purchase (order confirmation or receipt) required
-                  </li>
+                  <li>Proof of purchase required</li>
                   <li>Original shipping costs are non-refundable</li>
                 </ul>
               </div>
             </section>
 
+            {/* NON RETURNABLE ITEMS */}
             <section className="bg-card rounded-2xl p-8 border border-border">
               <h2 className="text-2xl font-semibold text-foreground mb-4">
                 Non-Returnable Items
@@ -49,142 +51,102 @@ const Returns = () => {
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Opened or used cosmetics and skincare products</li>
-                  <li>Pierced jewelry (earrings)</li>
-                  <li>Personalized or custom-engraved items</li>
-                  <li>Gift cards and e-gift certificates</li>
-                  <li>Items marked as "Final Sale" or "Non-Returnable"</li>
+                  <li>Pierced jewelry</li>
+                  <li>Personalized or engraved items</li>
+                  <li>Gift cards</li>
+                  <li>Items marked as "Final Sale"</li>
                 </ul>
               </div>
             </section>
 
+            {/* HOW TO RETURN */}
             <section className="bg-card rounded-2xl p-8 border border-border">
               <h2 className="text-2xl font-semibold text-foreground mb-4">
                 How to Initiate a Return
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>To start a return, please follow these steps:</p>
+                <p>To start a return, follow these steps:</p>
                 <ol className="list-decimal pl-6 space-y-2">
-                  <li>
-                    Log into your LuxeBeauty account and navigate to "Order
-                    History"
-                  </li>
-                  <li>
-                    Select the order containing the item(s) you wish to return
-                  </li>
-                  <li>
-                    Click "Request Return" and select the items and reason for
-                    return
-                  </li>
-                  <li>
-                    Print the prepaid return shipping label (for domestic
-                    orders)
-                  </li>
-                  <li>Pack items securely in original packaging if possible</li>
-                  <li>
-                    Drop off the package at any authorized shipping location
-                  </li>
+                  <li>Log into your LuxeBeauty account</li>
+                  <li>Select the order containing the item(s)</li>
+                  <li>Click “Request Return”</li>
+                  <li>Print the prepaid return label (domestic only)</li>
+                  <li>Pack items in original packaging</li>
+                  <li>Drop off at an authorized shipping center</li>
                 </ol>
+
                 <p>
-                  Alternatively, contact our customer service team at{' '}
+                  For help, email{' '}
                   <a
                     href="mailto:returns@luxebeauty.com"
                     className="text-primary hover:underline"
                   >
                     returns@luxebeauty.com
-                  </a>{' '}
-                  for assistance.
+                  </a>
+                  .
                 </p>
               </div>
             </section>
 
+            {/* REFUND PROCESS */}
             <section className="bg-card rounded-2xl p-8 border border-border">
               <h2 className="text-2xl font-semibold text-foreground mb-4">
                 Refund Process
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  Once we receive and inspect your return, we will process your
-                  refund:
-                </p>
+                <p>Once your return is received and inspected:</p>
                 <ul className="list-disc pl-6 space-y-2">
+                  <li>Inspection: 3-5 business days</li>
+                  <li>Refund: 5-7 business days after approval</li>
                   <li>
-                    <strong>Inspection Period:</strong> 3-5 business days after
-                    receipt
+                    Card refunds may take 5-10 additional days to appear on your
+                    statement
                   </li>
-                  <li>
-                    <strong>Refund Processing:</strong> 5-7 business days after
-                    approval
-                  </li>
-                  <li>
-                    <strong>Credit Card Refunds:</strong> May take an additional
-                    5-10 business days to appear on your statement
-                  </li>
-                  <li>
-                    <strong>Store Credit:</strong> Issued within 24 hours of
-                    approval (optional)
-                  </li>
+                  <li>Store credit is issued within 24 hours (optional)</li>
                 </ul>
-                <p>
-                  You will receive an email confirmation once your refund has
-                  been processed.
-                </p>
+                <p>You will receive an email confirmation when completed.</p>
               </div>
             </section>
 
+            {/* EXCHANGES */}
             <section className="bg-card rounded-2xl p-8 border border-border">
               <h2 className="text-2xl font-semibold text-foreground mb-4">
                 Exchanges
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  We currently do not offer direct exchanges. If you need a
-                  different size, color, or product:
-                </p>
+                <p>We do not offer direct exchanges:</p>
                 <ol className="list-decimal pl-6 space-y-2">
-                  <li>Return the original item for a refund</li>
-                  <li>Place a new order for the desired item</li>
+                  <li>Return the original item</li>
+                  <li>Place a new order</li>
                 </ol>
-                <p>
-                  This ensures the fastest processing time and guarantees
-                  availability of your desired item.
-                </p>
               </div>
             </section>
 
+            {/* DAMAGED ITEMS */}
             <section className="bg-card rounded-2xl p-8 border border-border">
               <h2 className="text-2xl font-semibold text-foreground mb-4">
                 Damaged or Defective Items
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  If you receive a damaged or defective item, please contact us
-                  within 48 hours of delivery with:
-                </p>
+                <p>Please contact us within 48 hours with:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Your order number</li>
-                  <li>Photos of the damaged item and packaging</li>
-                  <li>Description of the damage or defect</li>
+                  <li>Order number</li>
+                  <li>Photos of damage + packaging</li>
+                  <li>Description of the issue</li>
                 </ul>
-                <p>
-                  We will arrange for a replacement or full refund, including
-                  original shipping costs, at no additional charge.
-                </p>
               </div>
             </section>
 
+            {/* INTERNATIONAL RETURNS */}
             <section className="bg-card rounded-2xl p-8 border border-border">
               <h2 className="text-2xl font-semibold text-foreground mb-4">
                 International Returns
               </h2>
               <div className="space-y-4 text-muted-foreground">
+                <p>You are responsible for return shipping costs.</p>
                 <p>
-                  International customers are responsible for return shipping
-                  costs. We recommend using a trackable shipping method, as we
-                  cannot be responsible for items lost in transit.
-                </p>
-                <p>
-                  Please mark the package as "Returned Merchandise" to avoid
-                  additional customs charges.
+                  Please mark packages as “Returned Merchandise” to avoid
+                  customs fees.
                 </p>
               </div>
             </section>
